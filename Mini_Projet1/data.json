@@ -1,0 +1,55 @@
+{
+    "quiz": [
+        {
+            "question": "Quel est le plus grand océan du monde ?",
+            "options": ["Atlantique", "Indien", "Pacifique", "Arctique"],
+            "answer": "Pacifique"
+        },
+        {
+            "question": "Combien de continents y a-t-il sur Terre ?",
+            "options": ["5", "6", "7", "8"],
+            "answer": "7"
+        },
+        {
+            "question": "Quelle est la capitale de l’Espagne ?",
+            "options": ["Madrid", "Barcelone", "Séville", "Valence"],
+            "answer": "Madrid"
+        },
+        {
+            "question": "Combien de jours y a-t-il dans une année bissextile ?",
+            "options": ["364", "365", "366", "367"],
+            "answer": "366"
+        },
+        {
+            "question": "Quelle planète est surnommée la 'Planète Rouge' ?",
+            "options": ["Vénus", "Mars", "Jupiter", "Saturne"],
+            "answer": "Mars"
+        },
+        {
+            "question": "Qui a peint la Joconde ?",
+            "options": ["Van Gogh", "Pablo Picasso", "Léonard de Vinci", "Michel-Ange"],
+            "answer": "Léonard de Vinci"
+        },
+        {
+            "question": "Que signifie 'WWW' dans une adresse web ?",
+            "options": ["World Wide Web", "Web World Wide", "Wide Web World", "World Web Wide"],
+            "answer": "World Wide Web"
+        },
+        {
+            "question": "Quelle est la monnaie utilisée au Japon ?",
+            "options": ["Yuan", "Won", "Yen", "Ringgit"],
+            "answer": "Yen"
+        },
+        {
+            "question": "Quel est le plus grand mammifère du monde ?",
+            "options": ["Éléphant d’Afrique", "Baleine bleue", "Girafe", "Ours polaire"],
+            "answer": "Baleine bleue"
+        },
+        {
+            "question": "Combien de planètes y a-t-il dans le système solaire ?",
+            "options": ["6","7", "8", "9"],
+            "answer": "8"
+        }
+    ]
+}
+
