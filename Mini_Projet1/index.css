@@ -1,0 +1,162 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+
+#timer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #ff6f61;
+    color: white;
+    font-size: 1.5em;
+    text-align: center;
+    padding: 10px;
+    z-index: 10;
+}
+
+#time {
+    font-weight: bold;
+}
+
+
+#quizz {
+    margin: 20px 20px 20px 20px;
+}
+
+
+.qst {
+    background-color: #fff;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+.qst p {
+    font-size: 1.2em;
+    margin: 0;
+    padding-bottom: 10px;
+}
+
+
+.options label {
+    display: block;
+    background-color: #f9f9f9;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.options label:hover {
+    background-color: #e0e0e0;
+}
+
+
+button {
+    display: block;
+    margin: 30px auto;
+    padding: 12px 24px;
+    font-size: 1.2em;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+
+#resultat {
+    padding: 20px;
+    margin-top: 40px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+
+#quizz {
+    margin-top: 5px;
+    padding-bottom: 80px; 
+}
+
+.hidden {
+    display: none;
+}
+
+#form {
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+#form p {
+    font-size: 24px;
+    text-align: center;
+    color: #4CAF50;
+    font-weight: bold;
+}
+
+#form #questiooon {
+    margin: 10px 0;
+    font-size: 16px;
+    color: #555;
+}
+
+input[type="number"], select {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: border 0.3s ease;
+}
+
+input[type="number"]:focus, select:focus {
+    border-color: #4CAF50;
+    outline: none;
+}
+
+select {
+    cursor: pointer;
+}
+
+#generer {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    background-color: #4CAF50;
+    color: white;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#generer:hover {
+    background-color: #45a049;
+}
+
+#generer:active {
+    background-color: #3c8d40;
+}
+
