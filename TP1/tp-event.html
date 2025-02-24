@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8" />
+<title>Manipulation de vue</title>
+<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+</head>
+<body>
+
+<div id="monapp">
+	<button @click="changerTitre">{{ titre }}</button><br><br>
+</div>
+
+<div id="app2">
+	<button @click="incrementer">++</button>{{ compteur }}<button @click="decrementer">--</button>
+</div>
+<br>
+<div id="app3">
+	<input type="text" v-model="texte" placeholder="entrer un texte sans espaces" @input="checkSpaces">
+	<p v-if="alert" style="color : red;">Les espaces ne sont pas autorises ! </p>
+</div>
+
+<script>
+	const appli = {
+		data () {
+				return {
+					titre: "Cliquez moi!" 
+				};
+			},
+		methods: {
+			changerTitre() {
+				this.titre = "Cliqué!"; 
+			}
+		}
+	};
+
+	const appli2 = {
+		data () {
+				return {
+					compteur: 0 
+				};
+			},
+		methods: {
+			incrementer() {
+				this.compteur++; 
+			},
+			decrementer() {
+				this.compteur--;
+			}
+		}
+	};
+
+	const appli3 ={
+		data() {
+				return {
+					texte : '',
+					alert : false
+				};
+		},
+		methods : {
+			checkSpaces(){
+				this.alert = this.texte.includes(' ');
+			}
+		}
+	};
+	
+Vue.createApp(appli).mount("#monapp");
+Vue.createApp(appli2).mount("#app2");
+Vue.createApp(appli3).mount("#app3");
+</script>
+
+</body>
+</html>
