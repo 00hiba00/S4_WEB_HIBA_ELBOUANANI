@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projet 1-38</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <style>
+        img {
+            float: left;
+            margin-right: 1rem;
+        }
+        .personne {
+            clear: left;
+            padding: 1rem;
+        }
+        input[type="checkbox"], select {
+            margin-right: 1rem;
+        }
+        .misEnForme {
+            background: #e0ffff;
+            font-family: georgia;
+            font-size: 1.2rem;
+            margin: 1rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        <fieldset>
+            <legend>Filtre sur le nom</legend>
+            <input type="text" v-model="filtreNom">
+        </fieldset>
+        <fieldset>
+            <legend>Options</legend>
+            Homme <input type="checkbox" v-model="homme">
+            Femme <input type="checkbox" v-model="femme">
+            Contact <input type="checkbox" v-model="tel">
+            Photo
+            <select v-model="taille">
+                <option value="1">Petit</option>
+                <option value="2" selected>Moyen</option>
+                <option value="3">Grand</option>
+            </select>
+            Mise en forme <input type="checkbox" v-model="mef">
+        </fieldset>
+        <div class="personne" 
+             v-for="p in personnes"
+             
+        >
+            <div v-if="(((homme && p.name.title=='Mr') 
+                       || (femme && p.name.title=='Mrs'))
+                       && (p.name.last.toLowerCase().indexOf(filtreNom.toLowerCase())>=0
+                       || filtreNom==''))" :class="{misEnForme: mef}">
+                <img v-if="taille == 1" :src="p.picture.thumbnail">
+                <img v-if="taille == 2" :src="p.picture.medium">
+                <img v-if="taille == 3" :src="p.picture.large">
+                {{p.name.title}} {{p.name.first}} {{p.name.last}}<br>
+                <div v-if="tel">{{p.email}}</div>
+                <div v-if="tel">{{p.phone}}</div>
+                <div>{{p.location.country}}</div>
+            </div>
+        </div>
+    </div>
+    <script>
+        const app = Vue.createApp({
+            data() {
+                return {
+                    homme: true,
+                    femme: true,
+                    tel: false,
+                    mef: false,
+                    taille: 2,
+                    filtreNom: '',
+                    personnes: []
+                }
+            },
+            methods : {
+                recuperer() {
+                    fetch('personnes.json')
+                        .then(response => response.json())
+                        .then(data => { this.personnes = data;})
+                }
+            },
+            mounted() {
+                this.recuperer(); 
+              }
+        });
+        app.mount('#app');
+    </script>
+</body>
+
+</html>
